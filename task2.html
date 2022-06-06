@@ -22,8 +22,12 @@
         alert("You clicked me!");
       }
       function Button() {
-        // code here
-        return;
+        let button = React.createElement( 
+          'button',
+          {className: 'button'},
+          handleClick()
+        )
+        return ;
       }
 
       ReactDOM.render(Button(), rootElement);
