@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Task 2</title>
     <script
       src="https://unpkg.com/react@17/umd/react.development.js"
       crossorigin
@@ -21,16 +21,17 @@
       function handleClick(e) {
         alert("You clicked me!");
       }
-      function Button() {
-        let button = React.createElement( 
+      function Button(handleClick) {
+        return React.createElement( 
           'button',
-          {className: 'button'},
-          handleClick()
+          {className: 'button', onClick:handleClick},
+          'Button named',
         )
-        return ;
+
       }
 
-      ReactDOM.render(Button(), rootElement);
+      ReactDOM.render(Button (handleClick), rootElement);
+  
     </script>
   </body>
 </html>
