@@ -19,19 +19,28 @@
     <script type="text/babel">
       const rootElement = document.querySelector("#root");
 
-      function ListItem(props) {
+       function ListItem(props) {
         // your code from task 4
-      }
+        return (
+            <li>{props.text}</li>
+            )
+      } 
 
       function List(props) {
         // render the children in a ul
+          return(
+              <ul>
+                {props.children}
+              </ul>
+            
+           ) ;
       }
 
       ReactDOM.render(
         <List>
-          <ListItem text="Milk" />,
-          <ListItem text="Eggs" />,
-          <ListItem text="Flour" />,
+          <ListItem text="Milk" />
+          <ListItem text="Eggs" />
+          <ListItem text="Flour" />
         </List>,
         rootElement
       );
