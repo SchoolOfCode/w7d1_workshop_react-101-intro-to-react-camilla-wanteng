@@ -13,19 +13,44 @@
       crossorigin
     ></script>
     <!-- import babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
     <div id="root"></div>
     <!-- add the required type attribute -->
-    <script>
+    <script type="text/babel">
       const rootElement = document.querySelector("#root");
 
-      function Title() {
-        // convert this to jsx
-        return React.createElement("h1", null, "JSX Rules!");
+      const task1 = {
+        className : "task1",
+        text: "Hello world"
       }
 
-      ReactDOM.render(Title(), rootElement);
+      const task2 ={
+        className: "task2",
+        text:"task2 button"
+      }
+
+      function handleClick(e) {
+        alert("You clicked me!");
+      }
+
+      function task3(e1,e2) {
+        // convert this to jsx
+        return (
+          <div>
+            <h1 class={e1.className}> 
+              {e1.text}
+              </h1>
+              <button class ={e2.className} onClick = {handleClick}>
+                {e2.text}
+                </button>
+
+            </div>
+          )}
+
+      ReactDOM.render(task3(task1,task2), rootElement);
+      
     </script>
   </body>
 </html>
