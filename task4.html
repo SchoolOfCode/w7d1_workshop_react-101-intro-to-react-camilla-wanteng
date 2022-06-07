@@ -20,15 +20,21 @@
       const rootElement = document.querySelector("#root");
 
       function ListItem(props) {
-        // code here
+        return (
+          <ul>
+            <li>{props.text}</li>
+            </ul>
+            )
       }
 
+      
       ReactDOM.render(
         [
           <ListItem text="Milk" />,
           <ListItem text="Eggs" />,
           <ListItem text="Flour" />,
-        ],
+        ]
+        ,
         rootElement
       );
     </script>
