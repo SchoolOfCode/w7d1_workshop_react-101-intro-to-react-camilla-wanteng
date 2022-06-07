@@ -24,11 +24,19 @@
       }
 
       function Button(props) {
+         return (
+           <div>
+           <button  style={{color: props.color}} onClick= {props.onClick}>
+              {props.text}
+            </button>
+            <h1  style={{color: props.color}}> Hello World</h1>
+            </div>
+         )
         // return a button with some styles applied and handleclick passed as a prop
       }
 
       ReactDOM.render(
-        <Button onClick={handleClick} text="Click Me!" />,
+        <Button onClick={handleClick} text="Click Me!" color="red" />,
         rootElement
       );
     </script>
