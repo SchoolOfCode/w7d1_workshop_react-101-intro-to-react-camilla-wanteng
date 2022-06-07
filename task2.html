@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Document2</title>
     <script
       src="https://unpkg.com/react@17/umd/react.development.js"
       crossorigin
@@ -20,14 +20,14 @@
 
       function handleClick(e) {
         alert("You clicked me!");
-      }
+      };
+
       function Button() {
-        let button = React.createElement( 
+        const button = React.createElement( 
           'button',
-          {className: 'button'},
-          handleClick()
-        )
-        return ;
+          {className: 'button'}, 
+          )
+        return button;
       }
 
       ReactDOM.render(Button(), rootElement);
